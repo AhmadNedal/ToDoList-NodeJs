@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Task</title>
+    <link rel="stylesheet" href="/css/AddTask.css">
+  </head>
+
+
+<body>
+    
+  
+  <%- include('./shared/header.ejs')%>
+
+
+
+    <main>
+        <form action="/PostAddTask" method="POST">
+            <input placeholder="Title Note" type="text" name="subject">
+            <textarea placeholder="Note details" name="title" id=""></textarea>
+
+
+          </div>
+            <label class="checkbox-container">
+                <input class="ss" type="checkbox" name="check" value="yes" id="completed">
+                <label class="ss" for="completed">تمت؟</label>
+            </label>
+            
+            <button type="submit">Add Product</button>
+        </form>
+    </main>
+    
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+*{ 
+  margin: 0px;
+  padding: 0px;
+ }
+ form {
+  width: 333px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #2b2d2e;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.checkbox-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #756868;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 10px;
+}
+
+button:hover ,.Back:hover {
+  background-color: #443b3b;
+}
+.ss{
+  cursor: pointer;
+}
+
+textarea{ 
+  min-height: 120px;
+}
+
+.Back{
+  text-decoration: none ;
+  background-color: #776161;
+  color: white;
+  border-radius: 10px; 
+  display: flex;
+  margin-top: 20px;
+  padding: 9px;
+  justify-content: center;
+  align-items: center;
+}

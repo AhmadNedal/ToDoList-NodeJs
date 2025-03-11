@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/AddTask.css">
+</head>
+<body>
+
+  <%- include('./shared/header.ejs')%>
+
+
+  
+  
+
+  
+  
+  <% TaskEdite.forEach(ele => { %>
+
+    <main>
+      <form>
+          <input disabled="true" value="<%=ele.subject%>" type="text" name="subject">
+          <textarea disabled="true"><%=ele.title%></textarea>
+  
+          <label class="checkbox-container">
+            <input class="ss" disabled="true" type="checkbox" name="check" id="completed"
+            <% if (ele.check === "yes") { %> checked <% } %>
+            >
+            <label class="ss" for="completed">تمت؟</label>
+        </label>
+
+          
+          
+        <a class="Back" href="/" type="submit">Back</a>
+
+      </form>
+      
+  </main>
+
+  <% }) %>
+
+  
+</body>
+</html>

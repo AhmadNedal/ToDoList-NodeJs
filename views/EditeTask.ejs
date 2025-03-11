@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/AddTask.css">
+  <link rel="stylesheet" href="/css/header.css">
+
+ 
+</head>
+
+
+<body>
+
+  <%-include("../views/shared/header.ejs")%>
+  <% TaskEdite.forEach(ele => { %>
+
+    <main>
+      <form action="EditeTaskPost" method="POST">
+          <input hidden name="id" value="<%=ele.id%>">
+          <input  value="<%=ele.subject%>" type="text" name="subject">
+          <textarea name="title"><%=ele.title%></textarea>
+  
+          <label class="checkbox-container">
+            <input checked class="ss" type="checkbox" name="check" id="completed" >
+            <label  class="ss" for="completed">تمت؟</label>
+        </label>
+        </div>          
+        <!-- <p style="font-size: 10px;margin:3px;margin-top: 11px;">تمت الاضافة بنجاح</p> -->
+
+        <button type="submit">Edite Task</button>
+      </form>
+  </main>
+
+  <% }) %>
+
+
+  
+</body>
+
+</html>

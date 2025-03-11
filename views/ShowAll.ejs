@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllTask</title>
+    <link rel="stylesheet" href="/css/ShowAll.css">
+</head>
+<body>
+
+
+  <%- include('./shared/header.ejs')%>
+
+
+    <div class="bodyy">
+    <div class="container">
+      <% Tasks.forEach(ele => { %>
+        <div class="card">
+            <h3><%=ele.subject%></h3>
+            <p><%=ele.title%></p>
+            <h6><%=ele.check%></h6>
+            <div class="btn">
+            <a href="/EditeTask/<%= ele.id %>" class="btn">Edit</a>
+            <form action="Delete" method="post">
+              <input type="text" name="IDD" hidden value="<%=ele.id%>">
+              <button  type="submit" class="btnDelete">Delete</button>
+            </form>
+            <a href="/show/<%= ele.id %>" class="btn">Show</a>
+          </div>
+        </div>
+            
+      <% }) %>
+      </div>
+    </div>
+</body>
+</html>
